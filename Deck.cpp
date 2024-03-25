@@ -4,6 +4,7 @@
 
 #include "Deck.h"
 #include "RandomNumberGenerator.h"
+#include "Logger.h"
 #include <iostream>
 #include <cstdlib>
 Deck::Deck(int couleurs, int valeurs) {
@@ -15,9 +16,8 @@ Deck::Deck(int couleurs, int valeurs) {
 }
 float Deck::roll(){
     int r = RandomNumberGenerator::generate(this->valeurMin, this->valeurMax);
-
     float res = static_cast<float>(r)/static_cast<float>(this->valeurMax);
-    cout << "Min : " << this->valeurMin << "Max : " << this->valeurMax << "Res : " << r << "Res 2 :" << res;
+    Logger::Log("Min : "+to_string(this->valeurMin)+"   Max : "+to_string(this->valeurMax)+"   Res : "+to_string(r)+"   Res 2 :"+to_string(res));
     return res;
 }
 string Deck::getName(){

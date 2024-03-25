@@ -5,10 +5,11 @@
 #include "GameMaster.h"
 #include "Tirage.h"
 #include "RandomNumberGenerator.h"
+#include "Logger.h"
 #include<list>
 #include<string>
-#include <cstdlib>
 #include <iostream>
+
 GameMaster::GameMaster(list<int> listeFacesDes, list<int> listeNbFaces, int nbPiece, list<int> nbCouleurs, list<int> nbValeurs){
     this->listeDes = {};
     this->listeDecks = {};
@@ -20,13 +21,11 @@ GameMaster::GameMaster(list<int> listeFacesDes, list<int> listeNbFaces, int nbPi
     int cnt = 0;
     //int cntNF = 1;
 
-    cout << "Dés : \n" << *itef << "\n";
     lst.push_back(*itef);
     for(int i = 1; i <= listeFacesDes.size(); i++) {
         advance(itef, 1);
         if (i < *it + cnt) {
             lst.push_back(*itef);
-            cout << *itef << "\n";
         } else {
             if (i == *it + cnt) {
                 this->listeDes.push_back(De(lst));
@@ -36,15 +35,13 @@ GameMaster::GameMaster(list<int> listeFacesDes, list<int> listeNbFaces, int nbPi
                 advance(it, 1);
                 if(i != listeFacesDes.size()){
                     lst.push_back(*itef);
-                    cout << *itef << "\n";
                 }
             }
         }
     }
-    this->listeDes.push_back(De(lst));
+    //this->listeDes.push_back(De(lst));
     this->nbDes = listeNbFaces.size();
     cnt = 0;
-    cout << "Piece" << "\n";
     for(int i=0; i< nbPiece; i++)
     {
         this->listePieces.push_back(Piece());
@@ -52,18 +49,15 @@ GameMaster::GameMaster(list<int> listeFacesDes, list<int> listeNbFaces, int nbPi
     }
     this->nbPieces = cnt;
     cnt=0;
-    cout << "Deck" << "\n";
     it = nbCouleurs.begin();
     itef = nbValeurs.begin();
     this->listeDecks.push_back(Deck(*it, *itef));
-    cout << "Col : " << *it << "   Val : " << *itef << "\n";
     cnt++;
     for(int i=1; i < nbCouleurs.size(); i++)
     {
         advance(it, 1);
         advance(itef, 1);
         this->listeDecks.push_back(Deck(*it, *itef));
-        cout << "Col : " << *it << "   Val : " << *itef << "\n";
         cnt++;
     }
     this->nbDecks = cnt;
@@ -72,7 +66,6 @@ string GameMaster::pleaseGiveMeACrit(float succes, float critique, float fumble)
 
     int max = (this->nbPieces+this->nbDes+this->nbDecks-1);
     int r = RandomNumberGenerator::generate(0, max);
-    //cout << "Max : " << max << "   Rand : " << r;
     if(r < this->nbDes)
     {
         auto it = this->listeDes.begin();

@@ -91,6 +91,30 @@ build CMakeFiles/TP_Cpp.dir/ObjetAleatoire.cpp.o: CXX_COMPILER__TP_Cpp_unscanned
   OBJECT_DIR = CMakeFiles/TP_Cpp.dir
   OBJECT_FILE_DIR = CMakeFiles/TP_Cpp.dir
 
+build CMakeFiles/TP_Cpp.dir/Logger.cpp.o: CXX_COMPILER__TP_Cpp_unscanned_Debug /Users/admin/Desktop/TP_Cpp/Logger.cpp || cmake_object_order_depends_target_TP_Cpp
+  DEP_FILE = CMakeFiles/TP_Cpp.dir/Logger.cpp.o.d
+  FLAGS = -g -std=gnu++2b -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/TP_Cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/TP_Cpp.dir
+
+build CMakeFiles/TP_Cpp.dir/LoggerOutAdapter.cpp.o: CXX_COMPILER__TP_Cpp_unscanned_Debug /Users/admin/Desktop/TP_Cpp/LoggerOutAdapter.cpp || cmake_object_order_depends_target_TP_Cpp
+  DEP_FILE = CMakeFiles/TP_Cpp.dir/LoggerOutAdapter.cpp.o.d
+  FLAGS = -g -std=gnu++2b -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/TP_Cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/TP_Cpp.dir
+
+build CMakeFiles/TP_Cpp.dir/StdOutLogger.cpp.o: CXX_COMPILER__TP_Cpp_unscanned_Debug /Users/admin/Desktop/TP_Cpp/StdOutLogger.cpp || cmake_object_order_depends_target_TP_Cpp
+  DEP_FILE = CMakeFiles/TP_Cpp.dir/StdOutLogger.cpp.o.d
+  FLAGS = -g -std=gnu++2b -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/TP_Cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/TP_Cpp.dir
+
+build CMakeFiles/TP_Cpp.dir/FileOutLogger.cpp.o: CXX_COMPILER__TP_Cpp_unscanned_Debug /Users/admin/Desktop/TP_Cpp/FileOutLogger.cpp || cmake_object_order_depends_target_TP_Cpp
+  DEP_FILE = CMakeFiles/TP_Cpp.dir/FileOutLogger.cpp.o.d
+  FLAGS = -g -std=gnu++2b -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/TP_Cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/TP_Cpp.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target TP_Cpp
@@ -99,7 +123,7 @@ build CMakeFiles/TP_Cpp.dir/ObjetAleatoire.cpp.o: CXX_COMPILER__TP_Cpp_unscanned
 #############################################
 # Link the executable TP_Cpp
 
-build TP_Cpp: CXX_EXECUTABLE_LINKER__TP_Cpp_Debug CMakeFiles/TP_Cpp.dir/main.cpp.o CMakeFiles/TP_Cpp.dir/Tirage.cpp.o CMakeFiles/TP_Cpp.dir/De.cpp.o CMakeFiles/TP_Cpp.dir/Piece.cpp.o CMakeFiles/TP_Cpp.dir/Deck.cpp.o CMakeFiles/TP_Cpp.dir/GameMaster.cpp.o CMakeFiles/TP_Cpp.dir/ObjetAleatoire.cpp.o
+build TP_Cpp: CXX_EXECUTABLE_LINKER__TP_Cpp_Debug CMakeFiles/TP_Cpp.dir/main.cpp.o CMakeFiles/TP_Cpp.dir/Tirage.cpp.o CMakeFiles/TP_Cpp.dir/De.cpp.o CMakeFiles/TP_Cpp.dir/Piece.cpp.o CMakeFiles/TP_Cpp.dir/Deck.cpp.o CMakeFiles/TP_Cpp.dir/GameMaster.cpp.o CMakeFiles/TP_Cpp.dir/ObjetAleatoire.cpp.o CMakeFiles/TP_Cpp.dir/Logger.cpp.o CMakeFiles/TP_Cpp.dir/LoggerOutAdapter.cpp.o CMakeFiles/TP_Cpp.dir/StdOutLogger.cpp.o CMakeFiles/TP_Cpp.dir/FileOutLogger.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1
   OBJECT_DIR = CMakeFiles/TP_Cpp.dir
   POST_BUILD = :

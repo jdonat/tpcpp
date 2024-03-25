@@ -4,6 +4,7 @@
 
 #include "De.h"
 #include "RandomNumberGenerator.h"
+#include "Logger.h"
 #include <cstdlib>
 #include <iterator>
 #include <iostream>
@@ -23,7 +24,6 @@ De::De(list<int> listFace){
     auto it = this->listeFaces.begin();
     this->valeurMin = *it;
     //this->listeFaces.push_back(*it);
-    cout << "\nDé   Min : " << this->valeurMin << "   Max : " << this->valeurMax;
     /*for(int i=1; i<listFace.size(); i++)
     {
         advance(it, 1);
@@ -31,6 +31,7 @@ De::De(list<int> listFace){
     }*/
     advance(it, this->listeFaces.size()-1);
     this->valeurMax = *it;
+    //Logger::Log("\nDé   Min : "+to_string(this->valeurMin)+"   Max : "+to_string(this->valeurMax));
     this->nom = "un dé";
 }
 float De::roll() {
@@ -39,7 +40,7 @@ float De::roll() {
     advance(it, r);
     int face = *it;
     float res = static_cast<float>(face)/static_cast<float>(this->valeurMax);
-    cout << "Face : " << face << "   Max : " << this->valeurMax << "   Res : " << res;
+    Logger::Log("Face : "+to_string(face)+"   Max : "+to_string(this->valeurMax)+"   Res : "+to_string(res));
     return res;
 }
 string De::getName(){

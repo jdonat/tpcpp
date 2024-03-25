@@ -17,4 +17,12 @@ add_executable(TP_Cpp main.cpp
         ObjetAleatoire.cpp
         ObjetAleatoire.h
         RandomNumberGenerator.h
+        Logger.cpp
+        Logger.h
+        LoggerOutAdapter.cpp
+        LoggerOutAdapter.h
+        StdOutLogger.cpp
+        StdOutLogger.h
+        FileOutLogger.cpp
+        FileOutLogger.h
 )
