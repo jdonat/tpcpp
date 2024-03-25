@@ -7,7 +7,7 @@
 #include "ObjetAleatoire.h"
 #include <string>
 using namespace std;
-class Deck : public ObjetAleatoire {
+class Deck {
     int nbCouleurs;
     int nbValeurs;
     int valeurMin;
@@ -15,7 +15,7 @@ class Deck : public ObjetAleatoire {
     string nom;
 public:
     Deck(int couleurs, int valeurs);
-    float roll() override;
+    float roll();
     string getName();
 };
 

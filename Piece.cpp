@@ -10,9 +10,6 @@ Piece::Piece(){
     this->valeurMax = 1;
     this->nom = "une pièce";
 }
-float Piece::roll(){
-    return 0;
-}
 float Piece::roll(int n){
     int r;
     for(int i = 0; i < n; i++){

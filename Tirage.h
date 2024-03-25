@@ -15,9 +15,9 @@ class Tirage
     float succes, critique, echec, resultat;
 
 public:
-    Tirage(int suc, int crit, int ech, De obj);
-    Tirage(int suc, int crit, int ech, Piece obj);
-    Tirage(int suc, int crit, int ech, Deck obj);
+    Tirage(float suc, float crit, float ech, De obj);
+    Tirage(float suc, float crit, float ech, Piece obj);
+    Tirage(float suc, float crit, float ech, Deck obj);
     Tirage();
     float getResultat();
     float getSucces();

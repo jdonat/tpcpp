@@ -4,15 +4,16 @@
 #include "Tirage.h"
 #include "ObjetAleatoire.h"
 #include "RandomNumberGenerator.h"
+#include <iostream>
 
-Tirage::Tirage(int suc, int crit, int ech, De obj) {
+Tirage::Tirage(float suc, float crit, float ech, De obj) {
     this->succes = suc;
     this->critique = crit;
     this->echec = ech;
     this->nom = obj.getName();
     this->resultat=obj.roll();
 }
-Tirage::Tirage(int suc, int crit, int ech, Piece obj) {
+Tirage::Tirage(float suc, float crit, float ech, Piece obj) {
     this->succes = suc;
     this->critique = crit;
     this->echec = ech;
@@ -20,12 +21,13 @@ Tirage::Tirage(int suc, int crit, int ech, Piece obj) {
     int r = RandomNumberGenerator::generate(1, 5);
     this->resultat=obj.roll(r);
 }
-Tirage::Tirage(int suc, int crit, int ech, Deck obj) {
+Tirage::Tirage(float suc, float crit, float ech, Deck obj) {
     this->succes = suc;
     this->critique = crit;
     this->echec = ech;
     this->nom = obj.getName();
     this->resultat=obj.roll();
+
 }
 Tirage::Tirage(){
     this->succes = 0;

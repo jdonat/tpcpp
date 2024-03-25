@@ -8,7 +8,7 @@
 #include "ObjetAleatoire.h"
 #include <string>
 using namespace std;
-class De : public ObjetAleatoire{
+class De {
     int nombreFaces;
     list<int> listeFaces;
     int valeurMin;
@@ -17,7 +17,7 @@ class De : public ObjetAleatoire{
 public:
     De(int nbFace);
     De(list<int> listFace);
-    float roll() override;
+    float roll();
     string getName();
 };
 

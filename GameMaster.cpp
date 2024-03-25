@@ -18,7 +18,7 @@ GameMaster::GameMaster(list<int> listeFacesDes, list<int> listeNbFaces, int nbPi
     auto itef = listeFacesDes.begin();
     list<int> lst = {};
     int cnt = 0;
-    int cntNF = 1;
+    //int cntNF = 1;
 
     cout << "Dés : \n" << *itef << "\n";
     lst.push_back(*itef);
@@ -32,7 +32,7 @@ GameMaster::GameMaster(list<int> listeFacesDes, list<int> listeNbFaces, int nbPi
                 this->listeDes.push_back(De(lst));
                 lst = {};
                 cnt += *it;
-                cntNF++;
+                //cntNF++;
                 advance(it, 1);
                 if(i != listeFacesDes.size()){
                     lst.push_back(*itef);
@@ -56,7 +56,7 @@ GameMaster::GameMaster(list<int> listeFacesDes, list<int> listeNbFaces, int nbPi
     it = nbCouleurs.begin();
     itef = nbValeurs.begin();
     this->listeDecks.push_back(Deck(*it, *itef));
-    cout << "Col : " << *it << "   Val : " << *itef;
+    cout << "Col : " << *it << "   Val : " << *itef << "\n";
     cnt++;
     for(int i=1; i < nbCouleurs.size(); i++)
     {

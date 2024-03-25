@@ -7,16 +7,13 @@
 #include "ObjetAleatoire.h"
 #include <string>
 using namespace std;
-class Piece : public ObjetAleatoire {
+class Piece {
     int valeurMin;
     int valeurMax;
     string nom;
 public:
     Piece();
     float roll(int n);
-    float roll();
     string getName();
 };
-
-
 #endif //TP_CPP_PIECE_H
