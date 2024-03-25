@@ -11,9 +11,12 @@ class LoggerOutAdapter {
 private:
     StdOutLogger stdOutLogger;
     FileOutLogger fileOutLogger;
+    std::string method;
 public:
-    LoggerOutAdapter();
-    static void Display(std::string message, std::string method);
+    LoggerOutAdapter(std::string method);
+    void Display(std::string message);
+private:
+    std::string getMethod();
 };
 
 

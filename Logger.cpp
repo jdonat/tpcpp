@@ -5,9 +5,9 @@
 #include "Logger.h"
 #include "LoggerOutAdapter.h"
 #include <string>
-Logger::Logger() {
-    this->loggerOutAdapter = LoggerOutAdapter();
+Log::Log(){
+    this->loggerOutAdapter = LoggerOutAdapter("console");
 }
 void Logger::Log(std::string message){
-    LoggerOutAdapter::Display(message, "cout");
+    loggerOutAdapter.Display(message);
 }

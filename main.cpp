@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Gamemaster.h"
 #include "Logger.h"
+
 using namespace std;
 int main() {
 

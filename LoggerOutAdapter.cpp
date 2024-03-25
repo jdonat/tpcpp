@@ -7,16 +7,17 @@
 #include "FileOutLogger.h"
 #include <string>
 #include <iostream>
-LoggerOutAdapter::LoggerOutAdapter(){
+LoggerOutAdapter::LoggerOutAdapter(std::string method){
     stdOutLogger = StdOutLogger();
     fileOutLogger = FileOutLogger();
+    this->method = method;
 }
-void LoggerOutAdapter::Display(std::string message, std::string method){
-    if(method == "cout"){
+void LoggerOutAdapter::Display(std::string message){
+    if(LoggerOutAdapter::getMethod() == "cout"){
         StdOutLogger::Display(message);
     }
     else {
-        if(method == "file"){
+        if(LoggerOutAdapter::getMethod() == "file"){
             FileOutLogger::StoreLog(message);
         }
         else
