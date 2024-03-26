@@ -7,16 +7,9 @@
 #include "StdOutLogger.h"
 #include "FileOutLogger.h"
 #include <string>
-class LoggerOutAdapter {
-private:
-    StdOutLogger stdOutLogger;
-    FileOutLogger fileOutLogger;
-    std::string method;
+class LoggerOutAdapter : public StdOutLogger, public FileOutLogger{
 public:
-    LoggerOutAdapter(std::string method);
-    void Display(std::string message);
-private:
-    std::string getMethod();
+    static void Display(std::string message, std::string method);
 };
 
 

@@ -6,11 +6,10 @@
 #define TP_CPP_LOGGER_H
 #include <string>
 #include "LoggerOutAdapter.h"
-class Logger {
+class Logger : public LoggerOutAdapter{
 private:
-    LoggerOutAdapter loggerOutAdapter;
+    static std::string method;
 public:
-    Logger();
     static void Log(std::string message);
 };
 
