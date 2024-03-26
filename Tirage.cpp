@@ -4,6 +4,7 @@
 #include "Tirage.h"
 #include "ObjetAleatoire.h"
 #include "RandomNumberGenerator.h"
+#include "Logger.h"
 #include <iostream>
 
 Tirage::Tirage(float suc, float crit, float ech, De obj) {
@@ -12,6 +13,8 @@ Tirage::Tirage(float suc, float crit, float ech, De obj) {
     this->echec = ech;
     this->nom = obj.getName();
     this->resultat=obj.roll();
+    Logger::Log("Succes2: "+to_string(this->getSucces())+"   Crit2: "+to_string(this->getCritique())+"   Echec2: "+to_string(this->getEchec()));
+
 }
 Tirage::Tirage(float suc, float crit, float ech, Piece obj) {
     this->succes = suc;
@@ -20,6 +23,8 @@ Tirage::Tirage(float suc, float crit, float ech, Piece obj) {
     this->nom = obj.getName();
     int r = RandomNumberGenerator::generate(1, 5);
     this->resultat=obj.roll(r);
+    Logger::Log("Succes2: "+to_string(this->getSucces())+"   Crit2: "+to_string(this->getCritique())+"   Echec2: "+to_string(this->getEchec()));
+
 }
 Tirage::Tirage(float suc, float crit, float ech, Deck obj) {
     this->succes = suc;
@@ -27,6 +32,7 @@ Tirage::Tirage(float suc, float crit, float ech, Deck obj) {
     this->echec = ech;
     this->nom = obj.getName();
     this->resultat=obj.roll();
+    Logger::Log("Succes2: "+to_string(this->getSucces())+"   Crit2: "+to_string(this->getCritique())+"   Echec2: "+to_string(this->getEchec()));
 
 }
 Tirage::Tirage(){
@@ -40,17 +46,21 @@ float Tirage::getResultat(){
 }
 string Tirage::getResultatString() {
     if(this->resultat <= this->echec){
+        this->resultatState = 1;
         return "Echec critique !";
     }
     else {
         if(this->resultat < this->succes){
+            this->resultatState = 2;
             return "Echec !";
         }
         else {
             if(this->resultat < this->critique){
+                this->resultatState = 3;
                 return "Réussite !";
             }
             else {
+                this->resultatState = 4;
                 return "Réussite critique !";
             }
         }
@@ -65,6 +75,9 @@ float Tirage::getCritique(){
 float Tirage::getEchec(){
     return this->echec;
 }
-string Tirage::getName(){
+std::string Tirage::getName(){
     return this->nom;
+}
+int Tirage::getResultatState(){
+    return this->resultatState;
 }

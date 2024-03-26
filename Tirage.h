@@ -12,6 +12,7 @@ using namespace std;
 class Tirage
 {
     string nom;
+    int resultatState;
     float succes, critique, echec, resultat;
 
 public:
@@ -24,6 +25,7 @@ public:
     float getCritique();
     float getEchec();
     string getResultatString();
+    int getResultatState();
     string getName();
 
 };

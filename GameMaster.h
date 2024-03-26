@@ -23,6 +23,10 @@ public:
     string pleaseGiveMeACrit(float succes, float critique, float fumble);
     string getObjetNom();
     float getResultat();
+    float getSuccess();
+    float getCritique();
+    float getEchec();
+    int getResultatState();
 };
 
 

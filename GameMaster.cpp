@@ -98,3 +98,15 @@ string GameMaster::getObjetNom(){
 float GameMaster::getResultat() {
     return this->tyrage.getResultat();
 }
+int GameMaster::getResultatState() {
+    return this->tyrage.getResultatState();
+}
+float GameMaster::getSuccess(){
+    return this->tyrage.getSucces();
+}
+float GameMaster::getCritique(){
+    return this->tyrage.getCritique();
+}
+float GameMaster::getEchec(){
+    return this->tyrage.getEchec();
+}
